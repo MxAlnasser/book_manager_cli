@@ -9,6 +9,7 @@ while true; do
     case "$choice" in
         "Browse Library") "$ROOT_DIR/ui/library_screen.sh" ;;
         "Add Book") "$ROOT_DIR/workflows/manage_library.sh" add ;;
+        "Update Book") "$ROOT_DIR/workflows/manage_library.sh" update ;;
         "Search Library") "$ROOT_DIR/workflows/manage_library.sh" search ;;
         "Get Recommendations") "$ROOT_DIR/workflows/get_recommendations.sh" ;;
         "Quit"|"") echo "Goodbye."; break ;;

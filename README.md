@@ -22,9 +22,9 @@ When you choose **Get Recommendations**, three Codex agents run at the same time
 
 ## Architecture
 
-The app follows `UI -> workflows -> components -> data -> CSV`. `app.sh` starts the menu. UI scripts display information, workflow scripts coordinate actions, book and recommendation scripts do one small job, and `data/book_database.sh` is the only file that reads or writes `books.csv`.
+The app follows `UI -> workflows -> components -> data -> CSV`. `app.sh` starts the menu. UI scripts display information, workflow scripts coordinate actions, book and recommendation scripts do one small job, and `data/book_database.sh` is the only file that reads or writes `books.csv`. The library workflow can add books, search them, and update their status and rating.
 
-Recommendations demonstrate the data flow required for this assignment: three independent Codex agents run in parallel with `&`, `$!`, and `wait`; their output is combined with `cat`, piped into `refine_recommendations.sh`, and displayed by the UI. Progress is shown while the agents work. If Codex is unavailable, each agent uses two local example recommendations.
+Recommendations demonstrate the data flow required for this assignment: the data layer creates a library snapshot, three independent Codex agents receive that snapshot and run in parallel with `&`, `$!`, and `wait`; their output is combined with `cat`, piped into `refine_recommendations.sh`, and displayed by the UI. Progress is shown while the agents work. If Codex is unavailable, each agent uses two local example recommendations.
 
 ## Personalization
 

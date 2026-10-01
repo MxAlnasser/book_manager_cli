@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 show_main_menu() {
-    local options=("Browse Library" "Add Book" "Search Library" "Get Recommendations" "Quit")
+    local options=("Browse Library" "Add Book" "Update Book" "Search Library" "Get Recommendations" "Quit")
     if command -v gum >/dev/null 2>&1; then
         gum choose "${options[@]}"
     else

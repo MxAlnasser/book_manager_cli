@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-prompt='Read data/books.csv. Recommend two books related to design, architecture, systems thinking, or technology. Return only two lines in this exact format: title|author|reason. Do not use bullets, markdown, or extra text.'
+library_data="$(cat)"
+prompt="Use this library snapshot to recommend two books related to design, architecture, systems thinking, or technology. Return only two lines in this exact format: title|author|reason. Do not use bullets, markdown, or extra text.
+
+$library_data"
 
 recommendations=""
 if command -v codex >/dev/null 2>&1; then
