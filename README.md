@@ -2,7 +2,7 @@
 
 ## Demo
 
-<video src="demo.mp4" controls></video>
+[Watch the demo video](demo.mp4)
 
 ## Run it
 
