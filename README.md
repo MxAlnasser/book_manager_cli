@@ -1,5 +1,9 @@
 # Personal Book Manager
 
+## Demo
+
+<video src="demo.mp4" controls></video>
+
 ## Run it
 
 ```bash
